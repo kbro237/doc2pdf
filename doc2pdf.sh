@@ -11,6 +11,6 @@ done
 # Take those html files and 'print' them to PDF. (Also, clean up the filename a bit.) Then remove the those temp html files.
 for temp in *.temp.html
 do
-    /usr/sbin/cupsfilter "$temp" > "`basename $temp | sed 's/\.temp\.html//'`.pdf"
+    /usr/sbin/cupsfilter "$temp" > "`basename "$temp" | sed 's/\.temp\.html//'`.pdf"
     rm "$temp"
 done
